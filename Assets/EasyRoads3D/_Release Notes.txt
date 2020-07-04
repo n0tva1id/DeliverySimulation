@@ -1,0 +1,24 @@
+Release Notes 2.5.5 : 23-01-2014 
+
+
+New:
+- You can now blend the road with the terrain at the start and end of the road. One of the EasyRoads3D transparent shaders is required for this. Apply this to the following material: /Assets/EasyRoads3D/Resources/roadMaterial  
+
+
+Improvements:
+- The option to add tangent info to procedural side objects for correct bump mapping. Select the side object and in the Inspector check "Add Mesh Tangents"
+- ctrl-alt to pan the scene no longer interferes with ctrl snap marker to terrain while moving the marker.
+- All paths are now relative to the package location so you can now drag the EasyRoads3D folder in the Assets folder to for example and "Extensions" folder. But be careful when importing an update, it will import in the default folder which can cause conflicts with the same older scripts in another folder. Delete these older scripts first!
+
+Fixes:
+- Custom procedural objects that are crossing road objects do no longer snap to the road when "Snap to Terrain" in "General Settings" is turned off
+- Several minor editor bug fixes such as error messages appearing when opening the side object manager in an empty scene.
+
+Install Notes:
+
+To install this update in an existing EasyRoads3D project it is recommended to follow the next steps:
+
+1. Open a new scene.
+2. Remove all the folders and scripts in the folder /Assets/EasyRoads3D/ except sideobjectsLog.er3dObjects . sideobjectsLog.er3dObjects contains all side objects data, do not delete it!
+3. Import the new package
+4. Open your scene.
